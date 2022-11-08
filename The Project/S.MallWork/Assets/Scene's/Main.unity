@@ -200,7 +200,49 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8048609970428236763, guid: 2cbc8eaca0b9995439a5c9e19a708c91,
+        type: 3}
+      propertyPath: Speed
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048609970428236763, guid: 2cbc8eaca0b9995439a5c9e19a708c91,
+        type: 3}
+      propertyPath: vehicleIsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048609970428236763, guid: 2cbc8eaca0b9995439a5c9e19a708c91,
+        type: 3}
+      propertyPath: torqueSpeedCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048609970428236763, guid: 2cbc8eaca0b9995439a5c9e19a708c91,
+        type: 3}
+      propertyPath: torqueSpeedCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048609970428236763, guid: 2cbc8eaca0b9995439a5c9e19a708c91,
+        type: 3}
+      propertyPath: torqueSpeedCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048609970428236763, guid: 2cbc8eaca0b9995439a5c9e19a708c91,
+        type: 3}
+      propertyPath: torqueSpeedCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048609970428236763, guid: 2cbc8eaca0b9995439a5c9e19a708c91,
+        type: 3}
+      propertyPath: torqueSpeedCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048609970428236763, guid: 2cbc8eaca0b9995439a5c9e19a708c91,
+        type: 3}
+      propertyPath: torqueSpeedCurve.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4773491639670975670, guid: 2cbc8eaca0b9995439a5c9e19a708c91, type: 3}
+    - {fileID: 7855682946946361010, guid: 2cbc8eaca0b9995439a5c9e19a708c91, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2cbc8eaca0b9995439a5c9e19a708c91, type: 3}
 --- !u!1 &152377381063685131
 GameObject:
@@ -236,7 +278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1016547543257293188
 Transform:
   m_ObjectHideFlags: 0

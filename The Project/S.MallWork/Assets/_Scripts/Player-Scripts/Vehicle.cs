@@ -2,28 +2,13 @@
 
     public class Vehicle : MonoBehaviour
     {
-        public float antiRollBarForce;
-        public float maxBrakeTorque;
-
-        public float maxMotorTorque;
-
-        public float maxSteeringAngle = 35;
-        public float minSteeringAngle = 20;
         public bool  vehicleIsActive = true;
+        public float BrakeSpeed, Speed;
+       [Range(0, 360)]  public float maxAngle = 35, minAngle = 20;
+       public AnimationCurve torqueSpeedCurve;
 
-        public AnimationCurve torqueSpeedCurve;
-
-        [HideInInspector]
-        public float velocity;
-
-        protected float smoothXAxis;
-        protected float xAxis;
-        protected float xAxisVelocity;
-        protected float yAxis;
-
-
-        public void Active(bool state)
-        {
-            vehicleIsActive = state;
-        }
+       [HideInInspector]
+       public float velocity;
+        protected float smoothX, velocityX;
+        public void Active(bool state) => vehicleIsActive = state;
     }

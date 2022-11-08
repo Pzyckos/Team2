@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4013715322409927899}
   - component: {fileID: 8417482253238062544}
   m_Layer: 0
-  m_Name: WheelControllerRR
+  m_Name: BR-Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 6043204296004236721}
   - component: {fileID: 8417482253238062546}
   m_Layer: 0
-  m_Name: WheelControllerFR
+  m_Name: FR-Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 6835394222710575424}
   - component: {fileID: 3563406419020454573}
   m_Layer: 0
-  m_Name: WheelControllerFL
+  m_Name: FL-Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 5305568896154108447}
   - component: {fileID: 8417482253238062545}
   m_Layer: 0
-  m_Name: WheelControllerRL
+  m_Name: BL-Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 4679715890973592119}
   - component: {fileID: 4679715890972461303}
   m_Layer: 0
-  m_Name: WheelFR
+  m_Name: FR-Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 4679715890973592121}
   - component: {fileID: 4679715890972461305}
   m_Layer: 0
-  m_Name: WheelFL
+  m_Name: FL-Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,8 +424,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4679715890970692117}
   - component: {fileID: 8143433750913628529}
-  - component: {fileID: 4773491639670975670}
-  - component: {fileID: 7855682946946361010}
+  - component: {fileID: 8048609970428236763}
+  - component: {fileID: 7610652581691768304}
   m_Layer: 0
   m_Name: ShoppingCart
   m_TagString: Untagged
@@ -475,7 +475,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4773491639670975670
+--- !u!114 &8048609970428236763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -484,58 +484,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 4679715890970269237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24adeb470c539d0489c11d3750dfc2ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 39ecb22803da2f54fa0e865a1d3f173a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  antiRollBarForce: 0
-  maxBrakeTorque: 500
-  maxMotorTorque: 90
-  maxSteeringAngle: 8.84
-  minSteeringAngle: 11.54
   vehicleIsActive: 1
-  torqueSpeedCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  BrakeSpeed: 500
+  Speed: 90
   velocity: 0
-  wheels:
+  maxAngle: 8.84
+  minAngle: 11.54
+  listWheels:
   - power: 0
     steer: 1
-    wheelVisual: {fileID: 4679715890970692115}
+    wheelModel: {fileID: 4679715890970692115}
     wheelCollider: {fileID: 3563406419020454573}
   - power: 0
     steer: 1
-    wheelVisual: {fileID: 4679715890970692113}
+    wheelModel: {fileID: 4679715890970692113}
     wheelCollider: {fileID: 8417482253238062546}
   - power: 1
     steer: 0
-    wheelVisual: {fileID: 4679715890970692143}
+    wheelModel: {fileID: 4679715890970692143}
     wheelCollider: {fileID: 8417482253238062545}
   - power: 1
     steer: 0
-    wheelVisual: {fileID: 4679715890970692141}
+    wheelModel: {fileID: 4679715890970692141}
     wheelCollider: {fileID: 8417482253238062544}
---- !u!114 &7855682946946361010
+--- !u!114 &7610652581691768304
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -544,11 +519,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4679715890970269237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1eba2d3365cf04db94e8deff9f2f76, type: 3}
+  m_Script: {fileID: 11500000, guid: 96f6e9552a1d0944298288b1955d10d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centerOfMassOffset: {x: 0, y: -0.36, z: 0.02}
-  showCOM: 1
+  massOffset: {x: 0, y: -0.36, z: 0.02}
+  _showing: 1
 --- !u!1 &4679715890970269257
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +649,7 @@ GameObject:
   - component: {fileID: 4679715890973592115}
   - component: {fileID: 4679715890972461299}
   m_Layer: 0
-  m_Name: WheelRR
+  m_Name: BR-WHeel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -757,7 +732,7 @@ GameObject:
   - component: {fileID: 4679715890973592117}
   - component: {fileID: 4679715890972461301}
   m_Layer: 0
-  m_Name: WheelRL
+  m_Name: BL=Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,7 +854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6384464247046280730
 Transform:
   m_ObjectHideFlags: 0
